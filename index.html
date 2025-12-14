@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal S. Gaikwad | Data Analyst</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #020617, var(--bg)); color: var(--text);
+    }
+    .container { max-width: 1100px; margin: auto; padding: 32px 16px 64px; }
+    header {
+      display: grid; gap: 12px; border-bottom: 1px solid var(--border); padding-bottom: 20px;
+    }
+    h1 { margin: 0; font-size: 36px; letter-spacing: .3px; }
+    .subtitle { color: var(--muted); font-weight: 500; }
+    .contact { display: flex; flex-wrap: wrap; gap: 14px; color: var(--muted); }
+    .contact a { color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--border); }
+
+    .grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; margin-top: 28px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+    .card { background: rgba(17,24,39,.7); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+    .card h3 { margin-top: 0; }
+
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #0b1220; border: 1px solid var(--border); margin: 4px 6px 4px 0; font-size: 13px; }
+
+    .tabs { display: flex; gap: 10px; margin-bottom: 12px; }
+    .tab { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); cursor: pointer; }
+    .tab.active { background: #0b1220; border-color: var(--accent); }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    ul { padding-left: 18px; }
+    li { margin-bottom: 6px; }
+
+    .project { border: 1px dashed var(--border); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
+    .project h4 { margin: 0 0 6px; }
+
+    .badge { color: #052e16; background: #bbf7d0; border-radius: 6px; padding: 2px 6px; font-size: 12px; margin-left: 6px; }
+
+    footer { margin-top: 36px; color: var(--muted); text-align: center; }
+
+    .btn { background: transparent; color: var(--text); border: 1px solid var(--border); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:hover { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Vishal S. Gaikwad</h1>
+      <div class="subtitle">MCA Student | Python • Data Analysis • Visualization | Machine Learning</div>
+      <div class="contact">
+        <span>Phone: 7709632126</span>
+        <span>Email: <a href="mailto:gaikwadvishal2226@outlook.com">gaikwadvishal2226@outlook.com</a></span>
+        <span>Location: Wagholi, Pune</span>
+        <span>GitHub: <a href="https://github.com/The-vishal-gaikwad" target="_blank">github.com/The-vishal-gaikwad</a></span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <aside class="card">
+        <h3>Skills</h3>
+        <div>
+          <span class="pill">Python</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">NumPy</span>
+          <span class="pill">Matplotlib</span>
+          <span class="pill">Scikit-Learn</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Excel</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Git & GitHub</span>
+        </div>
+        <h3>Languages</h3>
+        <div>
+          <span class="pill">English</span>
+          <span class="pill">Marathi</span>
+          <span class="pill">Hindi</span>
+        </div>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Data storytelling</li>
+          <li>Analytical reasoning</li>
+          <li>Collaborative mindset</li>
+          <li>Solution-oriented problem solving</li>
+        </ul>
+      </aside>
+
+      <main class="card">
+        <div class="tabs">
+          <div class="tab active" data-tab="summary">Summary</div>
+          <div class="tab" data-tab="projects">Projects</div>
+          <div class="tab" data-tab="education">Education</div>
+          <div class="tab" data-tab="certs">Certifications</div>
+          <div class="tab" data-tab="interests">Interests</div>
+        </div>
+
+        <section id="summary" class="section active">
+          <p>
+            MCA fresher with strong skills in Python, Power BI, Excel, Pandas, NumPy, and Scikit-Learn.
+            Seeking a Data Analyst or Machine Learning internship/role to apply analytical skills,
+            work on real datasets, and contribute to data-driven decisions.
+          </p>
+        </section>
+
+        <section id="projects" class="section">
+          <div class="project">
+            <h4>Email Spam Detection System <span class="badge">ML</span></h4>
+            <ul>
+              <li>Built classification models using Decision Tree, Random Forest, and SVM.</li>
+              <li>Performed data preprocessing, feature extraction, model training, and evaluation.</li>
+              <li>Achieved reliable spam vs ham prediction on real email data.</li>
+            </ul>
+            <button class="btn" onclick="window.open('https://github.com/The-vishal-gaikwad/Spam-Email-Detection-ML','_blank')">View on GitHub</button>
+          </div>
+        </section>
+
+        <section id="education" class="section">
+          <ul>
+            <li><strong>MCA</strong> – Anantrov Pawar College of Engineering & Research, Pune (2025/26 – Last Semester, Pursuing)</li>
+            <li><strong>BCA</strong> – Sangola College, Sangola (2023), CGPA: 8.63</li>
+            <li><strong>12th (Science – Math)</strong>: 67%</li>
+            <li><strong>10th</strong> – SSV, Bawada: 73%</li>
+          </ul>
+        </section>
+
+        <section id="certs" class="section">
+          <ul>
+            <li>Power BI – Techling Solution, Deccan (Received Job Offer Letter)</li>
+            <li>Spoken English – Speak Well, Chandanagar</li>
+            <li>Git Training – Spoken Tutorial</li>
+          </ul>
+        </section>
+
+        <section id="interests" class="section">
+          <ul>
+            <li>Reading & Writing (Diary, Marathi Poetry)</li>
+            <li>Sketching & Painting</li>
+            <li>Fitness & Meditation</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>© Vishal S. Gaikwad</p>
+    </footer>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
